@@ -1,8 +1,14 @@
 import React from 'react'
+import Banner from '@/components/ui-components/Banner/Banner'
+
+import About from '@/components/ui-components/About/About'
 
 const page = () => {
   return (
-    <div>Hello World</div>
+    <>
+      <Banner />
+      <About />
+    </>
   )
 }
 
