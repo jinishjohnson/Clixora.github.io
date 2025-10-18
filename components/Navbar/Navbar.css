@@ -30,7 +30,7 @@
     max-width: 500px;
     padding: 0.5rem 1rem;
     justify-content: center;
-    background: transparent;
+    background: white;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     border: none;
@@ -48,7 +48,7 @@
     justify-content: center;
     flex-wrap: nowrap;
     padding: 0;
-    background: transparent;
+    background: white;
     border: none;
     box-shadow: none;
   }
@@ -66,10 +66,12 @@
   }
 
   .nav-links {
+    background-color: white;
     padding: 0.3rem 0.6rem;
   }
 
   .nav-links a {
+    
         margin-left: 0rem !important;
     font-size: 0.8rem;
   }
