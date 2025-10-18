@@ -1,0 +1,29 @@
+.w3_container{
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(243 244 246);
+    padding: 4rem 2rem;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.card-container > * {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}

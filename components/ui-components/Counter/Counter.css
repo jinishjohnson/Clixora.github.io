@@ -1,0 +1,60 @@
+
+.counter-item{
+    display: flex;
+    flex-direction: column;
+    gap: clamp(5px, 1vw, 10px);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: clamp(10px, 2vw, 20px);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.counter-title{
+    font-size: clamp(18px, 4vw, 25px);
+    font-weight: bold;
+    text-align: center;
+}
+.counter{
+    font-size: clamp(24px, 5vw, 30px);
+    font-weight: bold;
+    color: red;
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .counter-item {
+        gap: 3px;
+        padding: 8px;
+    }
+    .counter-title {
+        font-size: 16px;
+    }
+    .counter {
+        font-size: 22px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .counter-item {
+        gap: 5px;
+        padding: 12px;
+    }
+    .counter-title {
+        font-size: 20px;
+    }
+    .counter {
+        font-size: 26px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+    .counter-item {
+        gap: 8px;
+        padding: 15px;
+    }
+}

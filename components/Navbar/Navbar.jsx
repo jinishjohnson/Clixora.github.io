@@ -1,12 +1,24 @@
 'use client'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import './Navbar.css'
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [scrolled])
 
   const isActive = (path) => {
     if (path === '/') return pathname === '/'
@@ -17,9 +29,9 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navbar">
+      <div className={`navbar ${scrolled ? 'scrolled' : ''} `}>
         <div className="logo">
-          <Image src="/Logo.png" alt="Clixhora" width={150} height={50} />
+          <Image src={scrolled ? '/Logo2.png' : '/Logo.png'} alt="Clixhora" width={scrolled ? 120 : 150} height={scrolled ? 40 : 50} />
         </div>
         <div className="nav-links">
           <Link   href="/" className={isActive('/')}>Home</Link>

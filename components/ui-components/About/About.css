@@ -1,0 +1,172 @@
+.about{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.about > div {
+    flex: 1;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+
+.about-content {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 1.5rem;
+    max-width: 700px;
+}
+
+.about-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.about-para {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #6e6e6e;
+    margin: 0;
+}
+
+.about-cta {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    background: #007aff;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+}
+
+.about-cta:hover {
+    background: #0051d5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 122, 255, 0.4);
+}
+
+.about-cta:active {
+    transform: translateY(0);
+}
+
+.about-image {
+    position: relative;
+    max-width: 450px;
+    width: 100%;
+}
+
+.about-image img {
+    border-radius: 20px;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.about > div > img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.about > div > p {
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+/* Tablet devices (768px - 1024px) */
+@media (max-width: 1024px) {
+    .about {
+        padding: 3rem 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .about-content {
+        max-width: 500px;
+    }
+
+    .about-title {
+        font-size: 2rem;
+    }
+
+    .about-para {
+        font-size: 1.1rem;
+    }
+
+    .about-image {
+        max-width: 350px;
+    }
+}
+
+/* Mobile devices (below 768px) */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 3rem 1.5rem;
+        min-height: auto;
+    }
+
+    .about > div {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .about-content {
+        align-items: center !important;
+        max-width: 100%;
+    }
+
+    .about-title {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .about-para {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .about-image {
+        max-width: 100%;
+    }
+}
+
+/* Small mobile devices (below 480px) */
+@media (max-width: 480px) {
+    .about {
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .about-title {
+        font-size: 1.5rem;
+    }
+
+    .about-para {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .about-cta {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+        width: 100%;
+        text-align: center;
+    }
+}

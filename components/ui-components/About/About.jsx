@@ -1,12 +1,26 @@
 import React from 'react'
-import Title from '../Title/Title'
+import './About.css'
+import Image from 'next/image'
+
 
 const About = () => {
   return (
     <div className="about">
-     <Title title="About Us" 
-     subtitle="We are a team of dedicated professionals" 
-     description="We have been in the industry for over 10 years, and we have worked with a number of successful clients. Our team consists of experienced marketers, web developers, and SEO specialists." />
+      <div className='about-content'>
+        <h1 className="about-title">About Us</h1>
+        <p className="about-para">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+          exercitationem, quibusdam, quos, voluptatibus quidem voluptate
+          consequatur doloremque voluptatum quas molestias voluptates. Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Natus
+          exercitationem, quibusdam, quos, voluptatibus quidem voluptate
+          consequatur doloremque voluptatum quas molestias voluptates.
+        </p>
+        <button className="about-cta">Read More</button>
+      </div>
+      <div className="about-image">
+        <Image src="/assets/abt.png" alt="about" width={350} height={250} />
+      </div>
     </div>
   )
 }

@@ -9,7 +9,13 @@
   padding: 0.75rem 2rem;
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
-  z-index: 1000;
+  z-index: 99999;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.navbar.scrolled {
+  padding: 0.5rem 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Responsive tweaks */
@@ -74,10 +80,12 @@
   font-weight: bold;
   display: flex;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
 .logo img {
   filter: drop-shadow(0 4px 12px rgba(0,0,0,0.25));
+  transition: all 0.3s ease;
 }
 
 .nav-links {
@@ -92,6 +100,15 @@
   padding: 0.6rem 1.2rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+}
+
+.navbar.scrolled .nav-links {
+  padding: 0.4rem 1rem;
+}
+
+.navbar.scrolled .nav-links a {
+  padding: 0.5rem 0.8rem;
+  font-size: 0.95rem;
 }
 
 
